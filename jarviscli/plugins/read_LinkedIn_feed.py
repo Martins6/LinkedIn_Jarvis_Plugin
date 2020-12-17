@@ -8,11 +8,11 @@ def read_feed(jarvis, s):
 
     # Currently, it is only supports Google Chrome browser.
     jarvis.say('Opening browser.')
-    bot = LinkedInBot.bot(r'C:\Users\adriel.m.martins\Documents\WebDrivers\chromedriver.exe')
+    bot = LinkedInBot.bot(browser='chrome')
 
     jarvis.say('Signing in.')
-    username = linkedin_setup.username
-    password = linkedin_setup.password
+    username = jarvis.input('Please insert username: ')
+    password = jarvis.input('Please insert password: ')
     bot.sign_in(username, password)
 
     jarvis.say('Exctracting data, ' + user)
