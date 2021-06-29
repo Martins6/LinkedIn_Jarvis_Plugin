@@ -23,8 +23,8 @@ def read_feed(jarvis, s):
 
     jarvis.say('Beginning your reading.')
     for index, row in df.iterrows():
-        jarvis.say(row.author)
-        jarvis.say(row.title)
+        jarvis.say(row.author_name)
+        jarvis.say(row.author_title)
         jarvis.say(row.post)
 
         jarvis.say('Next post.')
